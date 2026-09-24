@@ -1,0 +1,34 @@
+[
+  {
+    "app": "Annotator-Connotator",
+    "file": "assets/screenshots/annotator-connotator.webp",
+    "width": 1600,
+    "height": 1286,
+    "caption": "YouTube字幕の取り込み・解析設定",
+    "capture_date": "2026-09-24"
+  },
+  {
+    "app": "Sprint Lab",
+    "file": "assets/screenshots/sprint-lab.webp",
+    "width": 1600,
+    "height": 1115,
+    "caption": "TAM Sprint 2：学習・確認モード",
+    "capture_date": "2026-09-24"
+  },
+  {
+    "app": "Pronunciation Lab",
+    "file": "assets/screenshots/pronunciation-lab.webp",
+    "width": 1600,
+    "height": 1394,
+    "caption": "今日のLab：自分の発音に合った練習",
+    "capture_date": "2026-09-24"
+  },
+  {
+    "app": "Speaking Lab",
+    "file": "assets/screenshots/speaking-lab.webp",
+    "width": 1600,
+    "height": 984,
+    "caption": "Connotieと、話したいことから",
+    "capture_date": "2026-09-24"
+  }
+]

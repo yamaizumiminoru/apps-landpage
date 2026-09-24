@@ -27,3 +27,8 @@ Desktop and mobile screenshots inspected, including hero, product cards and Lab 
 - No personal user details, keys, local filesystem paths, private-repository URLs or source notes are shipped in `dist/`.
 - Public availability wording needs an intentional update when real user access is ready.
 - Hosting deployment success and the live URL must be checked separately in GitHub Actions/Pages.
+
+
+## Real-screen addition - 2026-09-24
+
+All 15 Node regression checks passed, including the production build and WebP delivery from the Pages subpath. Installed Chrome passed at 320, 375, 390, 768, 1024 and 1440px: four loaded images and no horizontal overflow. All four full-image dialogs, Escape and focus return, keyboard opening, close button, backdrop, mobile dialog and no-JavaScript image links passed. No page errors. Details: screenshot-browser-report.json; provenance: SCREENSHOTS.md.

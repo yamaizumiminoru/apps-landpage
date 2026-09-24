@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-24",
+  "viewport_checks": [
+    {
+      "width": 320,
+      "four_images_loaded": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 375,
+      "four_images_loaded": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "four_images_loaded": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 768,
+      "four_images_loaded": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1024,
+      "four_images_loaded": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "four_images_loaded": true,
+      "horizontal_overflow": false
+    }
+  ],
+  "modal_checks": [
+    {
+      "app": "Annotator-Connotator",
+      "full_image_loaded": true,
+      "escape_and_focus_return": true
+    },
+    {
+      "app": "Sprint Lab",
+      "full_image_loaded": true,
+      "escape_and_focus_return": true
+    },
+    {
+      "app": "Pronunciation Lab",
+      "full_image_loaded": true,
+      "escape_and_focus_return": true
+    },
+    {
+      "app": "Speaking Lab",
+      "full_image_loaded": true,
+      "escape_and_focus_return": true
+    }
+  ],
+  "keyboard_open_close_button_backdrop": true,
+  "mobile_dialog": true,
+  "no_javascript_original_image_link": true,
+  "page_errors": [],
+  "node_tests_passed": 15,
+  "image_bytes": 428196
+}

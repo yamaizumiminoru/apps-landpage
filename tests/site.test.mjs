@@ -7,6 +7,7 @@ import { createRequire } from 'node:module';
 import { execFileSync } from 'node:child_process';
 import { once } from 'node:events';
 import { createSiteServer } from '../scripts/serve.mjs';
+import { SCREENSHOT_NAMES } from '../scripts/public-assets.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
@@ -73,12 +74,12 @@ test('keyboard, screen reader, reduced motion and no-JS hooks are present', () =
   assert.match(js, /event.key === 'Escape'/);
 });
 test('JavaScript parses cleanly', () => {
-  for (const file of ['assets/app.js','assets/guide.js','scripts/build.mjs','scripts/serve.mjs']) execFileSync(process.execPath, ['--check', resolve(root, file)]);
+  for (const file of ['assets/app.js','assets/guide.js','assets/screenshots.js','scripts/public-assets.mjs','scripts/build.mjs','scripts/serve.mjs']) execFileSync(process.execPath, ['--check', resolve(root, file)]);
 });
 test('production build exports only the public static allowlist', async () => {
   execFileSync(process.execPath, [resolve(root, 'scripts/build.mjs')]);
   assert.deepEqual((await readdir(resolve(root, 'dist'))).sort(), ['.nojekyll','404.html','assets','index.html'].sort());
-  assert.deepEqual((await readdir(resolve(root, 'dist/assets'))).sort(), ['app.js','favicon.svg','guide.js','style.css'].sort());
+  assert.deepEqual((await readdir(resolve(root, 'dist/assets'))).sort(), ['app.js','favicon.svg','guide.js','screenshots','screenshots.js','style.css'].sort());
   assert.equal(await readFile(resolve(root, 'dist/index.html'),'utf8'), html);
 });
 test('HTTP serves root and Pages subpath, protects source files, and rejects writes', async () => {
@@ -92,10 +93,48 @@ test('HTTP serves root and Pages subpath, protects source files, and rejects wri
       assert.equal(response.status, 200, path);
       assert.equal(response.headers.get('x-content-type-options'), 'nosniff');
     }
-    for (const path of ['/.git/config','/package.json','/docs/CONTENT_SOURCES.md','/%2e%2e/%2e%2e/etc/passwd','/apps-landpage/unknown']) assert.equal((await fetch(base+path)).status, 404, path);
+    for (const name of SCREENSHOT_NAMES) {
+      for (const variant of [name, name + '-thumb']) {
+        const response = await fetch(base + '/apps-landpage/assets/screenshots/' + variant + '.webp');
+        assert.equal(response.status, 200);
+        assert.equal(response.headers.get('content-type'), 'image/webp');
+        assert.ok((await response.arrayBuffer()).byteLength > 1000);
+      }
+    }
+    for (const path of ['/scripts/public-assets.mjs','/assets/screenshots/unreviewed.png','/.git/config','/package.json','/docs/CONTENT_SOURCES.md','/%2e%2e/%2e%2e/etc/passwd','/apps-landpage/unknown']) assert.equal((await fetch(base+path)).status, 404, path);
     assert.equal((await fetch(base+'/',{method:'POST'})).status,405);
     const head = await fetch(base+'/',{method:'HEAD'});
     assert.equal(head.status,200);
     assert.equal(await head.text(),'');
   } finally { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }
+});
+
+test('each product has a responsive real screenshot and accessible enlargement link', () => {
+  assert.equal((html.match(/class="app-screenshot"/g) || []).length, 4);
+  assert.equal((html.match(/data-screenshot-title=/g) || []).length, 4);
+  assert.equal((html.match(/loading="lazy" decoding="async"/g) || []).length, 4);
+  for (const name of SCREENSHOT_NAMES) {
+    assert.ok(html.includes(`./assets/screenshots/${name}.webp`));
+    assert.ok(html.includes(`./assets/screenshots/${name}-thumb.webp 800w`));
+  }
+  assert.ok(html.includes('Chromeで撮影した開発中アプリの実画面'));
+  assert.doesNotMatch(html, /実際のUIとは異なります/);
+  assert.match(html, /<dialog[^>]+aria-labelledby="screenshot-title"/);
+});
+test('the screenshot allowlist includes only the eight reviewed WebP files', async () => {
+  const expected = SCREENSHOT_NAMES.flatMap(name => [name + '.webp', name + '-thumb.webp']).sort();
+  assert.deepEqual((await readdir(resolve(root, 'dist/assets/screenshots'))).sort(), expected);
+  for (const name of expected) {
+    const data = await readFile(resolve(root, 'dist/assets/screenshots', name));
+    assert.equal(data.toString('ascii', 0, 4), 'RIFF');
+    assert.equal(data.toString('ascii', 8, 12), 'WEBP');
+    assert.ok(data.length > 1000);
+  }
+});
+test('the enlargement code uses native dialogs without network, tracking or injected HTML', async () => {
+  const code = await readFile(resolve(root, 'assets/screenshots.js'), 'utf8');
+  assert.match(code, /showModal/);
+  assert.match(code, /opener.focus/);
+  assert.match(code, /event.metaKey/);
+  assert.doesNotMatch(code, /innerHTML|fetch\s*\(|XMLHttpRequest|sendBeacon|getUserMedia|localStorage/);
 });

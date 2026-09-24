@@ -14,3 +14,7 @@ Initial Japanese LP for Annotator-Connotator, Sprint Lab, Pronunciation Lab and 
 - GitHub Actions validation, downloadable site artifact and guarded Pages deployment.
 
 No application backend, user registration, payment processing or new cross-app integrations are added by this LP.
+
+## 2026-09-24 — 実画面スクリーンショット
+
+4アプリの説明用イメージをChromeで撮影した実画面へ変更。WebP・800/1600pxレスポンシブ画像・遅延読み込み・クリック拡大・Escで閉じる・フォーカス復帰に対応。JavaScriptなしでも元画像を開けます。ビルドとプレビュー配信で公開ファイルの許可リストを共通化しました。スクリーンショットの出典と加工範囲は `docs/SCREENSHOTS.md` に記録。公開設定は変更していません。

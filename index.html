@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./assets/style.css">
   <script src="./assets/guide.js" defer></script>
   <script src="./assets/app.js" defer></script>
+  <script src="./assets/screenshots.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
@@ -102,11 +103,13 @@
             <h3 id="annotator-title">Annotator-<wbr>Connotator</h3>
             <p class="lab-tagline">好きな文章を、<br>奥行きのある教材に。</p>
             <p class="lab-description">文章やYouTube字幕から、語彙・構文だけでなく、言外の意味やことばの響きまで。わからないところを、文脈の中で理解する。</p>
-            <div class="product-preview annotation-preview" aria-label="ニュアンス解説のイメージ">
-              <p class="preview-eyebrow">NUANCE NOTE <span>解説イメージ</span></p>
-              <p class="annotation-text" lang="en">That's <mark>an interesting idea</mark>.</p>
-              <div class="annotation-note"><span class="note-stem" aria-hidden="true"></span><strong>「面白いね」だけとは限らない。</strong><p>純粋な関心なのか、評価を保留しているのか。ことばの選び方と前後の文脈から考えます。</p></div>
-            </div>
+            <figure class="app-screenshot">
+              <a class="screenshot-frame" href="./assets/screenshots/annotator-connotator.webp" data-screenshot-title="Annotator-Connotator" aria-describedby="annotator-screenshot-caption">
+                <img src="./assets/screenshots/annotator-connotator-thumb.webp" srcset="./assets/screenshots/annotator-connotator-thumb.webp 800w, ./assets/screenshots/annotator-connotator.webp 1600w" sizes="(max-width: 700px) calc(100vw - 92px), (max-width: 1256px) calc((100vw - 184px) / 2), 494px" width="1600" height="1286" loading="lazy" decoding="async" alt="Annotator-Connotatorの実画面。YouTube字幕の入力、解説言語、難易度、ニュアンス表示の設定。解析前の画面です。">
+                <span class="screenshot-zoom" aria-hidden="true">実画面を拡大 <span>↗</span></span>
+              </a>
+              <figcaption id="annotator-screenshot-caption"><span class="capture-label">実際の画面</span>YouTube字幕の取り込み・解析設定</figcaption>
+            </figure>
             <ul class="feature-list"><li>語彙・表現・文法と、ニュアンスを別々に解説</li><li>翻訳・読み上げを、読む・聞く練習に活用</li><li>気になる表現や聞き取れなかった箇所を残す</li></ul>
             <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：好きな題材を深く理解したい</span><a href="https://yamaizumiminoru.github.io/Annotator-Connotator-LP/" class="text-link" target="_blank" rel="noopener noreferrer">詳しい紹介を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
           </article>
@@ -116,12 +119,13 @@
             <h3 id="sprint-title">Sprint Lab</h3>
             <p class="lab-tagline">わかっている文法を、<br>とっさの一言に。</p>
             <p class="lab-description">時制、冠詞、動詞に続く形、句動詞。「考えればわかる」を、意味や文脈からすばやく取り出すための短い練習に。</p>
-            <div class="product-preview sprint-preview" aria-label="Verb Frame練習のイメージ">
-              <p class="preview-eyebrow">VERB FRAME <span>練習イメージ</span></p>
-              <div class="frame-example"><span class="frame-tag">suggest</span><span class="frame-connector" aria-hidden="true">→</span><span class="frame-completion" lang="en">doing something</span></div>
-              <div class="frame-example"><span class="frame-tag">decide</span><span class="frame-connector" aria-hidden="true">→</span><span class="frame-completion" lang="en">to do something</span></div>
-              <p class="preview-bottom-note">似た意味でも、続く「形」は違う。</p>
-            </div>
+            <figure class="app-screenshot">
+              <a class="screenshot-frame" href="./assets/screenshots/sprint-lab.webp" data-screenshot-title="Sprint Lab" aria-describedby="sprint-screenshot-caption">
+                <img src="./assets/screenshots/sprint-lab-thumb.webp" srcset="./assets/screenshots/sprint-lab-thumb.webp 800w, ./assets/screenshots/sprint-lab.webp 1600w" sizes="(max-width: 700px) calc(100vw - 92px), (max-width: 1256px) calc((100vw - 184px) / 2), 494px" width="1600" height="1115" loading="lazy" decoding="async" alt="Sprint Labの実画面。時制などを扱うTAM Sprint 2のセット選択、練習モード、発話開始の目標時間を表示。">
+                <span class="screenshot-zoom" aria-hidden="true">実画面を拡大 <span>↗</span></span>
+              </a>
+              <figcaption id="sprint-screenshot-caption"><span class="capture-label">実際の画面</span>TAM Sprint 2：学習・確認モード</figcaption>
+            </figure>
             <ul class="feature-list"><li>時制・相・法、冠詞・単複、Verb Frame、句動詞</li><li>意味・文脈を手がかりに、口に出す練習</li><li>学習・対照・苦手復習と、続きからの再開</li></ul>
             <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：知識をすばやく使いたい</span><a href="#availability" class="text-link" aria-label="Sprint Labの利用・公開状況を見る">利用・公開状況を見る <span aria-hidden="true">↗</span></a></div>
           </article>
@@ -131,11 +135,13 @@
             <h3 id="pronunciation-title">Pronunciation Lab</h3>
             <p class="lab-tagline">通じる発音にも、<br>自分だけのノビシロがある。</p>
             <p class="lab-description">自分の音声から改善候補を探し、本当に練習が必要かを確認。一度にひとつの焦点で、練習中だけでなく自然な会話での定着を目指す。</p>
-            <div class="product-preview pronunciation-preview" aria-label="発音学習の進み方のイメージ">
-              <p class="preview-eyebrow">YOUR OWN PROGRESS <span>学習の流れ</span></p>
-              <div class="audio-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="milestones"><span><b>01</b>練習で改善</span><span class="milestone-arrow" aria-hidden="true">→</span><span><b>02</b>初見でも</span><span class="milestone-arrow" aria-hidden="true">→</span><span><b>03</b>意識せずに</span></div>
-            </div>
+            <figure class="app-screenshot">
+              <a class="screenshot-frame" href="./assets/screenshots/pronunciation-lab.webp" data-screenshot-title="Pronunciation Lab" aria-describedby="pronunciation-screenshot-caption">
+                <img src="./assets/screenshots/pronunciation-lab-thumb.webp" srcset="./assets/screenshots/pronunciation-lab-thumb.webp 800w, ./assets/screenshots/pronunciation-lab.webp 1600w" sizes="(max-width: 700px) calc(100vw - 92px), (max-width: 1256px) calc((100vw - 184px) / 2), 494px" width="1600" height="1394" loading="lazy" decoding="async" alt="Pronunciation Labの実画面。確認された発音の練習対象と、練習後の定着確認を表示。">
+                <span class="screenshot-zoom" aria-hidden="true">実画面を拡大 <span>↗</span></span>
+              </a>
+              <figcaption id="pronunciation-screenshot-caption"><span class="capture-label">実際の画面</span>今日のLab：自分の発音に合った練習</figcaption>
+            </figure>
             <ul class="feature-list"><li>音読と会話から、本人に必要な改善点を確認</li><li>音声のお手本と、録音に基づくフィードバック</li><li>正当な発音のバリエーションは、誤りと区別</li></ul>
             <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：自分の発音をもう一段磨きたい</span><a href="#availability" class="text-link" aria-label="Pronunciation Labの利用・公開状況を見る">利用・公開状況を見る <span aria-hidden="true">↗</span></a></div>
           </article>
@@ -145,17 +151,18 @@
             <h3 id="speaking-title">Speaking Lab</h3>
             <p class="lab-tagline">話したいことを話す。<br>そこから、次が見つかる。</p>
             <p class="lab-description">AIのConnotieと、自分主導の会話。言えなかったことや気になった箇所を振り返り、納得したノビシロを残して、もう一度使ってみる。</p>
-            <div class="product-preview speaking-preview" aria-label="会話の振り返りのイメージ">
-              <p class="preview-eyebrow">YOUR CONVERSATION <span>体験イメージ</span></p>
-              <div class="conversation-row"><span class="conversation-avatar" aria-hidden="true">Y</span><p>この感じ、どう言えばいいんだろう。</p><span class="question-note" aria-hidden="true">?</span></div>
-              <div class="conversation-route"><span>会話</span><span aria-hidden="true">→</span><span>振り返り</span><span aria-hidden="true">→</span><strong>Take 2</strong></div>
-              <p class="preview-bottom-note">自分で確認した表現を、ノビシロDBへ。</p>
-            </div>
+            <figure class="app-screenshot">
+              <a class="screenshot-frame" href="./assets/screenshots/speaking-lab.webp" data-screenshot-title="Speaking Lab" aria-describedby="speaking-screenshot-caption">
+                <img src="./assets/screenshots/speaking-lab-thumb.webp" srcset="./assets/screenshots/speaking-lab-thumb.webp 800w, ./assets/screenshots/speaking-lab.webp 1600w" sizes="(max-width: 700px) calc(100vw - 92px), (max-width: 1256px) calc((100vw - 184px) / 2), 494px" width="1600" height="984" loading="lazy" decoding="async" alt="Speaking Labの実画面。Connotieとの会話開始、話題探し、前の会話の続き、自分の素材を持ち込む入口を表示。">
+                <span class="screenshot-zoom" aria-hidden="true">実画面を拡大 <span>↗</span></span>
+              </a>
+              <figcaption id="speaking-screenshot-caption"><span class="capture-label">実際の画面</span>Connotieと、話したいことから</figcaption>
+            </figure>
             <ul class="feature-list"><li>興味のある話題や、自分の資料で会話</li><li>気になる瞬間を「?」で残し、後から振り返る</li><li>Take 2で言い直す・必要な表現をAnkiへ</li></ul>
             <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：話しながら課題を見つけたい</span><a href="#availability" class="text-link" aria-label="Speaking Labの利用・公開状況を見る">利用・公開状況を見る <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
-        <p class="section-note">画面は機能を説明するためのイメージです。実際のUIとは異なります。機能・対応言語はアプリごとに異なり、現在も開発・検証を続けています。</p>
+        <p class="section-note">掲載画像は、2026年9月24日にChromeで撮影した開発中アプリの実画面です。画像を選ぶと拡大できます。機能・表示・対応言語はアプリごとに異なり、今後変更される場合があります。</p>
       </div>
     </section>
 
@@ -211,5 +218,6 @@
     </section>
   </main>
   <footer class="site-footer container"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Language<span class="brand-light"> Labs</span></span></a><p>あなたの言葉に、もうひとつの可能性を。</p><small>© 2026 Minoru Yamaizumi</small><a class="back-to-top" href="#top" aria-label="ページの先頭へ">↑</a></footer>
+  <dialog class="screenshot-dialog" id="screenshot-dialog" aria-labelledby="screenshot-title"><div class="screenshot-dialog-header"><div><p class="eyebrow">ACTUAL APP SCREEN</p><h2 id="screenshot-title">アプリの実画面</h2></div><button class="screenshot-close" type="button" autofocus>閉じる <span aria-hidden="true">×</span></button></div><div class="screenshot-stage"><img id="screenshot-image" alt=""></div><div class="screenshot-dialog-footer"><p>開発中版の実画面です。掲載日：2026年9月24日</p><a id="screenshot-original" target="_blank" rel="noopener noreferrer">画像を別のタブで開く ↗</a></div></dialog>
 </body>
 </html>

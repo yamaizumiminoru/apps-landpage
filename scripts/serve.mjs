@@ -2,10 +2,11 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { resolve, dirname, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PUBLIC_ASSETS } from './public-assets.mjs';
 
 export function createSiteServer(root) {
-  const allowed = new Set(['index.html', '404.html', 'assets/style.css', 'assets/app.js', 'assets/guide.js', 'assets/favicon.svg']);
-  const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml' };
+  const allowed = new Set(PUBLIC_ASSETS);
+  const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.webp': 'image/webp' };
   return createServer(async (req, res) => {
     const headers = { 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'no-store' };
     if (!['GET', 'HEAD'].includes(req.method)) {
