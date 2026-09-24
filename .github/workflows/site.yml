@@ -28,7 +28,7 @@ jobs:
           include-hidden-files: true
           retention-days: 7
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.PAGES_ENABLED == 'true'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: verify
     runs-on: ubuntu-latest
     permissions:
