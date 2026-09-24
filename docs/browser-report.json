@@ -1,0 +1,69 @@
+{
+  "render_mode": "inline",
+  "widths": [
+    {
+      "width": 320,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    },
+    {
+      "width": 700,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    },
+    {
+      "width": 820,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "four_recommendations": true,
+      "menu": true,
+      "js_errors": []
+    }
+  ],
+  "checks": [
+    "8 viewport widths x 4 recommendations; desktop/mobile navigation",
+    "Mini demo: retry, correct answer, reset, focus return",
+    "5 native FAQ disclosures open/close",
+    "Native keyboard radio interaction and reduced-motion preference",
+    "No-JavaScript fallback at 320/390/768/1440px"
+  ],
+  "status": "PASS"
+}

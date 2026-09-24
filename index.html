@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <meta name="description" content="「通じる」の、その先へ。Annotator-Connotator、Sprint Lab、Pronunciation Lab、Speaking Lab。知っているのに使えないノビシロを、好きな題材で見つけて鍛える、中級から上級のためのAI語学学習アプリ。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="「通じる」の、その先へ。 | Language Labs">
+  <meta property="og:description" content="知っている。けれど、とっさに使えない。そんなノビシロを、AIと見つけて鍛える4つの語学学習アプリ。">
+  <meta name="twitter:card" content="summary">
+  <title>「通じる」の、その先へ。 | Language Labs</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/guide.js" defer></script>
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Language Labs トップ">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>Language<span class="brand-light"> Labs</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>メニュー <span aria-hidden="true">＋</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
+        <a href="#concept">コンセプト</a>
+        <a href="#labs">4つのLab</a>
+        <a href="#journey">使い方</a>
+        <a class="nav-cta" href="#find-your-lab">自分に合うLabは？ <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> A LITTLE FURTHER. A LOT MORE YOU.</p>
+        <h1 id="hero-title"><span>「通じる」の、</span><br><span class="accent-word">その先へ。</span></h1>
+        <p class="hero-lead">知っている。けれど、とっさに使えない。<br>そんな<span class="inline-emphasis">ノビシロ</span>を、AIと見つけて鍛える。</p>
+        <p class="hero-description">中級から上級を目指す、4つの語学学習アプリ。<br class="desktop-break">あなたの興味と、あなたに必要な練習から。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#labs">4つのLabを見てみる <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#find-your-lab">どこから始める？ <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="preview-note"><span aria-hidden="true">◌</span> 開発中のアプリを紹介するプレビューページです</p>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit-label" aria-hidden="true">YOUR NEXT<br><strong>BREAKTHROUGH.</strong></div>
+        <div class="demo-board">
+          <div class="board-top"><span><span class="mini-mark" aria-hidden="true">↗</span> Sprint Lab</span><span class="demo-badge">ミニデモ</span></div>
+          <div class="board-body">
+            <div class="board-kicker"><span class="small-label">TODAY'S NOBISHIRO</span><span class="topic-pill">Verb Frame</span></div>
+            <h2 class="demo-heading">聞けばわかる。<br>口に出すと、迷う。</h2>
+            <p class="demo-context">「もっと詳しく調べてみよう」と提案したい。</p>
+            <p class="demo-sentence" lang="en">I suggest <span id="demo-blank" class="sentence-blank">_____</span><br>a closer look.</p>
+            <div class="demo-answers" role="group" aria-label="空欄に入る表現を選ぶ" hidden>
+              <button type="button" class="answer-button" data-answer="to take" aria-pressed="false"><span class="answer-index" aria-hidden="true">A</span><span lang="en">to take</span></button>
+              <button type="button" class="answer-button" data-answer="taking" aria-pressed="false"><span class="answer-index" aria-hidden="true">B</span><span lang="en">taking</span></button>
+            </div>
+            <noscript><p class="demo-static">この形では <i lang="en">taking</i>。<i lang="en">suggest</i> に提案の内容を続けるときは、<i lang="en">-ing</i> 形を使います。</p></noscript>
+            <div class="demo-feedback" id="demo-feedback" role="status" aria-live="polite"><span class="feedback-symbol" aria-hidden="true">↳</span><p id="demo-message">知っている表現を、とっさに選べる形へ。</p></div>
+            <button class="demo-reset" type="button" hidden>もう一度試す <span aria-hidden="true">↺</span></button>
+          </div>
+        </div>
+        <div class="growth-ticket" aria-hidden="true"><span class="ticket-icon">↗</span><div><span>FROM KNOWING TO DOING</span><strong>「知っている」を「使える」に。</strong></div></div>
+        <p class="visual-caption">学習体験を伝える説明用デモです。AI解析・録音は行いません。</p>
+      </div>
+    </section>
+
+    <div class="app-index container" aria-label="4つのアプリへのショートカット">
+      <a href="#annotator"><span class="index-number">01</span><span>Annotator-Connotator<small>理解を深める</small></span><span class="index-arrow" aria-hidden="true">↗</span></a>
+      <a href="#sprint"><span class="index-number">02</span><span>Sprint Lab<small>とっさに使う</small></span><span class="index-arrow" aria-hidden="true">↗</span></a>
+      <a href="#pronunciation"><span class="index-number">03</span><span>Pronunciation Lab<small>発音を磨く</small></span><span class="index-arrow" aria-hidden="true">↗</span></a>
+      <a href="#speaking"><span class="index-number">04</span><span>Speaking Lab<small>自分の言葉で話す</small></span><span class="index-arrow" aria-hidden="true">↗</span></a>
+    </div>
+
+    <section class="concept-section section-space container" id="concept" aria-labelledby="concept-title">
+      <div class="concept-intro">
+        <p class="eyebrow">THE NEXT LEVEL IS PERSONAL.</p>
+        <h2 id="concept-title">もう一度、初級から。<br>ではなく、<br><span class="accent-word">あなたの続きから。</span></h2>
+        <p>会話はできる。内容もわかる。<br>でも、発音や語法、細かなニュアンスには、<br class="desktop-break">まだしっくりこないところがある。</p>
+        <p>必要なのは、すべてを学び直すことではなく、<br class="desktop-break">その小さな差に気づき、使える形にする練習です。</p>
+        <div class="concept-statement"><span aria-hidden="true">↗</span><p>もっと難しく、よりも。<br><strong>もっと、自分のものに。</strong></p></div>
+      </div>
+      <div class="principles">
+        <article class="principle"><span class="principle-number">01 / REFINE</span><h3>通じる部分にも、<br>磨けるところがある。</h3><p>多少間違っていても伝わる発音や動詞の使い方、ニュアンス。見過ごされやすい部分まで、AIが学習をサポートします。</p></article>
+        <article class="principle"><span class="principle-number">02 / ACTIVATE</span><h3>知識を、<br>使える力にする。</h3><p>説明を読めばわかる。答えを見れば思い出す。そこから、会話の中でも取り出せるようにするための反復と実践へ。</p></article>
+        <article class="principle"><span class="principle-number">03 / PERSONALIZE</span><h3>自分のノビシロを、<br>見つけて鍛える。</h3><p>全員に同じ課題を課すのではなく、自分の発話やつまずきを手がかりに、今の自分に必要な練習を選びます。</p></article>
+        <article class="principle"><span class="principle-number">04 / CONNECT</span><h3>好きな題材を、<br>学びの入り口に。</h3><p>気になる動画、趣味の記事、仕事の専門分野。「知りたい」「話したい」と思える内容から、理解と会話を広げます。</p></article>
+      </div>
+    </section>
+
+    <section class="labs-section section-space" id="labs" aria-labelledby="labs-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">FOUR LABS. YOUR WAY.</p><h2 id="labs-title">ひとつずつでも。<br>組み合わせても。</h2></div><p>読む・聞く、語法、発音、会話。<br>それぞれの得意分野で、あなたの学びを支える。<br>まずは、今いちばん気になるLabから。</p></div>
+        <div class="labs-grid">
+          <article class="lab-card annotator-card" id="annotator" aria-labelledby="annotator-title">
+            <div class="lab-card-top"><span class="lab-symbol" aria-hidden="true">Aa<span>↗</span></span><span class="lab-role">INPUT / UNDERSTAND</span><span class="lab-number">01</span></div>
+            <h3 id="annotator-title">Annotator-<wbr>Connotator</h3>
+            <p class="lab-tagline">好きな文章を、<br>奥行きのある教材に。</p>
+            <p class="lab-description">文章やYouTube字幕から、語彙・構文だけでなく、言外の意味やことばの響きまで。わからないところを、文脈の中で理解する。</p>
+            <div class="product-preview annotation-preview" aria-label="ニュアンス解説のイメージ">
+              <p class="preview-eyebrow">NUANCE NOTE <span>解説イメージ</span></p>
+              <p class="annotation-text" lang="en">That's <mark>an interesting idea</mark>.</p>
+              <div class="annotation-note"><span class="note-stem" aria-hidden="true"></span><strong>「面白いね」だけとは限らない。</strong><p>純粋な関心なのか、評価を保留しているのか。ことばの選び方と前後の文脈から考えます。</p></div>
+            </div>
+            <ul class="feature-list"><li>語彙・表現・文法と、ニュアンスを別々に解説</li><li>翻訳・読み上げを、読む・聞く練習に活用</li><li>気になる表現や聞き取れなかった箇所を残す</li></ul>
+            <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：好きな題材を深く理解したい</span><a href="https://yamaizumiminoru.github.io/Annotator-Connotator-LP/" class="text-link" target="_blank" rel="noopener noreferrer">詳しい紹介を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+          </article>
+
+          <article class="lab-card sprint-card" id="sprint" aria-labelledby="sprint-title">
+            <div class="lab-card-top"><span class="lab-symbol" aria-hidden="true">↗</span><span class="lab-role">RETRIEVE / USE</span><span class="lab-number">02</span></div>
+            <h3 id="sprint-title">Sprint Lab</h3>
+            <p class="lab-tagline">わかっている文法を、<br>とっさの一言に。</p>
+            <p class="lab-description">時制、冠詞、動詞に続く形、句動詞。「考えればわかる」を、意味や文脈からすばやく取り出すための短い練習に。</p>
+            <div class="product-preview sprint-preview" aria-label="Verb Frame練習のイメージ">
+              <p class="preview-eyebrow">VERB FRAME <span>練習イメージ</span></p>
+              <div class="frame-example"><span class="frame-tag">suggest</span><span class="frame-connector" aria-hidden="true">→</span><span class="frame-completion" lang="en">doing something</span></div>
+              <div class="frame-example"><span class="frame-tag">decide</span><span class="frame-connector" aria-hidden="true">→</span><span class="frame-completion" lang="en">to do something</span></div>
+              <p class="preview-bottom-note">似た意味でも、続く「形」は違う。</p>
+            </div>
+            <ul class="feature-list"><li>時制・相・法、冠詞・単複、Verb Frame、句動詞</li><li>意味・文脈を手がかりに、口に出す練習</li><li>学習・対照・苦手復習と、続きからの再開</li></ul>
+            <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：知識をすばやく使いたい</span><a href="#availability" class="text-link" aria-label="Sprint Labの利用・公開状況を見る">利用・公開状況を見る <span aria-hidden="true">↗</span></a></div>
+          </article>
+
+          <article class="lab-card pronunciation-card" id="pronunciation" aria-labelledby="pronunciation-title">
+            <div class="lab-card-top"><span class="lab-symbol waveform-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="lab-role">LISTEN / REFINE</span><span class="lab-number">03</span></div>
+            <h3 id="pronunciation-title">Pronunciation Lab</h3>
+            <p class="lab-tagline">通じる発音にも、<br>自分だけのノビシロがある。</p>
+            <p class="lab-description">自分の音声から改善候補を探し、本当に練習が必要かを確認。一度にひとつの焦点で、練習中だけでなく自然な会話での定着を目指す。</p>
+            <div class="product-preview pronunciation-preview" aria-label="発音学習の進み方のイメージ">
+              <p class="preview-eyebrow">YOUR OWN PROGRESS <span>学習の流れ</span></p>
+              <div class="audio-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="milestones"><span><b>01</b>練習で改善</span><span class="milestone-arrow" aria-hidden="true">→</span><span><b>02</b>初見でも</span><span class="milestone-arrow" aria-hidden="true">→</span><span><b>03</b>意識せずに</span></div>
+            </div>
+            <ul class="feature-list"><li>音読と会話から、本人に必要な改善点を確認</li><li>音声のお手本と、録音に基づくフィードバック</li><li>正当な発音のバリエーションは、誤りと区別</li></ul>
+            <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：自分の発音をもう一段磨きたい</span><a href="#availability" class="text-link" aria-label="Pronunciation Labの利用・公開状況を見る">利用・公開状況を見る <span aria-hidden="true">↗</span></a></div>
+          </article>
+
+          <article class="lab-card speaking-card" id="speaking" aria-labelledby="speaking-title">
+            <div class="lab-card-top"><span class="lab-symbol conversation-icon" aria-hidden="true">···</span><span class="lab-role">SPEAK / DISCOVER</span><span class="lab-number">04</span></div>
+            <h3 id="speaking-title">Speaking Lab</h3>
+            <p class="lab-tagline">話したいことを話す。<br>そこから、次が見つかる。</p>
+            <p class="lab-description">AIのConnotieと、自分主導の会話。言えなかったことや気になった箇所を振り返り、納得したノビシロを残して、もう一度使ってみる。</p>
+            <div class="product-preview speaking-preview" aria-label="会話の振り返りのイメージ">
+              <p class="preview-eyebrow">YOUR CONVERSATION <span>体験イメージ</span></p>
+              <div class="conversation-row"><span class="conversation-avatar" aria-hidden="true">Y</span><p>この感じ、どう言えばいいんだろう。</p><span class="question-note" aria-hidden="true">?</span></div>
+              <div class="conversation-route"><span>会話</span><span aria-hidden="true">→</span><span>振り返り</span><span aria-hidden="true">→</span><strong>Take 2</strong></div>
+              <p class="preview-bottom-note">自分で確認した表現を、ノビシロDBへ。</p>
+            </div>
+            <ul class="feature-list"><li>興味のある話題や、自分の資料で会話</li><li>気になる瞬間を「?」で残し、後から振り返る</li><li>Take 2で言い直す・必要な表現をAnkiへ</li></ul>
+            <div class="lab-card-bottom"><span class="lab-use-case">こんなときに：話しながら課題を見つけたい</span><a href="#availability" class="text-link" aria-label="Speaking Labの利用・公開状況を見る">利用・公開状況を見る <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <p class="section-note">画面は機能を説明するためのイメージです。実際のUIとは異なります。機能・対応言語はアプリごとに異なり、現在も開発・検証を続けています。</p>
+      </div>
+    </section>
+
+    <section class="finder-section section-space container" id="find-your-lab" aria-labelledby="finder-title">
+      <div class="section-heading"><div><p class="eyebrow">START WHERE YOU ARE.</p><h2 id="finder-title">いま、どこを<br>伸ばしたい？</h2></div><p>ゴールを全部決めなくても大丈夫。<br>気になることをひとつ選ぶと、<br>最初のLabが見えてきます。</p></div>
+      <div class="lab-finder" hidden>
+        <form class="finder-options"><fieldset><legend class="sr-only">今の関心をひとつ選んでください</legend>
+          <label class="finder-option"><input type="radio" name="goal" value="discover" checked><span class="option-icon" aria-hidden="true">?</span><span><strong>何を鍛えるべきか、知りたい</strong><small>まずは話して、ノビシロを見つける</small></span><span class="radio-visual" aria-hidden="true"></span></label>
+          <label class="finder-option"><input type="radio" name="goal" value="retrieve"><span class="option-icon" aria-hidden="true">↗</span><span><strong>知っているのに、口から出ない</strong><small>語法や文法を、とっさに使う</small></span><span class="radio-visual" aria-hidden="true"></span></label>
+          <label class="finder-option"><input type="radio" name="goal" value="pronounce"><span class="option-icon" aria-hidden="true">〰</span><span><strong>伝わるけれど、発音を磨きたい</strong><small>自分に必要な改善点に絞って練習</small></span><span class="radio-visual" aria-hidden="true"></span></label>
+          <label class="finder-option"><input type="radio" name="goal" value="understand"><span class="option-icon" aria-hidden="true">Aa</span><span><strong>好きな題材を、深く理解したい</strong><small>単語の意味から、細かなニュアンスまで</small></span><span class="radio-visual" aria-hidden="true"></span></label>
+        </fieldset></form>
+        <div class="finder-result" data-result="discover">
+          <div aria-live="polite" aria-atomic="true"><p class="eyebrow">YOUR STARTING POINT</p><p class="result-intro" id="result-intro">まずは、話してみる。</p><h3 id="result-title">Speaking Lab</h3><p id="result-description">自分の好きな話題で会話して、言いたかったのに言えなかったことを振り返る。AIの提案を自分で確かめ、納得したノビシロを残せます。</p></div>
+          <a class="button button-light" id="result-link" href="#speaking">Speaking Labを見る <span aria-hidden="true">↗</span></a>
+          <p class="finder-caveat">選んだ関心に合わせた案内です。語学力の診断ではありません。</p>
+          <span class="result-decoration" aria-hidden="true">↗</span>
+        </div>
+      </div>
+      <noscript><p class="no-script-guide">理解を深めたいなら <a href="#annotator">Annotator-Connotator</a>、知識を使いたいなら <a href="#sprint">Sprint Lab</a>、発音なら <a href="#pronunciation">Pronunciation Lab</a>、会話と振り返りなら <a href="#speaking">Speaking Lab</a> から。</p></noscript>
+    </section>
+
+    <section class="journey-section section-space" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <p class="eyebrow">FOLLOW YOUR CURIOSITY.</p>
+        <div class="section-heading"><h2 id="journey-title">好きなことを、<br><span class="accent-word">話せることに。</span></h2><p>たとえば、気になる動画を1本。<br>「もっと知りたい」を「自分も話せる」に変えていく。<br>こんな学び方もできます。</p></div>
+        <div class="topic-tags" aria-label="題材の例"><span>ゲームの考察</span><span>仕事の専門分野</span><span>気になるニュース</span><span>趣味の動画</span><span class="topic-tag-open">あなたの好きなこと <span aria-hidden="true">↗</span></span></div>
+        <ol class="journey-steps">
+          <li><span class="step-number">01</span><h3>好きな題材を理解する</h3><p>文章や字幕の意味、言い回し、ニュアンスを確かめる。翻訳や音声も理解の助けに。</p><a href="#annotator">Annotator-Connotator <span aria-hidden="true">↗</span></a></li>
+          <li><span class="step-number">02</span><h3>その内容を話してみる</h3><p>理解した内容について、自分の意見や経験を話す。「ここが言えなかった」に気づく。</p><a href="#speaking">Speaking Lab <span aria-hidden="true">↗</span></a></li>
+          <li><span class="step-number">03</span><h3>必要なところを鍛える</h3><p>語法が出てこなければSprintへ。発音を磨きたければPronunciationへ。課題に合う練習を選ぶ。</p><div class="step-links"><a href="#sprint">Sprint Lab <span aria-hidden="true">↗</span></a><a href="#pronunciation">Pronunciation Lab <span aria-hidden="true">↗</span></a></div></li>
+          <li><span class="step-number">04</span><h3>もう一度、自分の言葉で</h3><p>覚えたことを、また会話で使ってみる。練習でできたことを、いつもの自分の言葉へ。</p><a href="#speaking">Speaking Lab <span aria-hidden="true">↗</span></a></li>
+        </ol>
+        <p class="journey-note"><span aria-hidden="true">↳</span> これは使い方の一例です。どのLabから始めても、ひとつだけ使っても。アプリ間の自動連携を前提とした手順ではありません。</p>
+      </div>
+    </section>
+
+    <section class="faq-section section-space container" id="faq" aria-labelledby="faq-title">
+      <div class="faq-heading"><p class="eyebrow">A FEW MORE THINGS.</p><h2 id="faq-title">気になること。</h2><p>できることも、<br>まだ途中のことも。</p></div>
+      <div class="faq-list">
+        <details><summary>どのくらいのレベルの人向けですか？<span aria-hidden="true">＋</span></summary><div class="faq-answer"><p>基本的な内容は理解でき、ある程度やり取りもできるけれど、より正確に、自然に、自分の考えを表現したい人を主な対象にしています。特に「ルールは知っているのに会話では使えない」「伝わるので、そのままになっている課題がある」という中級〜上級の学習者を想定しています。</p><p>初歩の体系的な学習や、資格試験の得点を保証するサービスではありません。</p></div></details>
+        <details><summary>4つ全部を使う必要がありますか？<span aria-hidden="true">＋</span></summary><div class="faq-answer"><p>ありません。好きな文章を読みたい、発音だけを磨きたい、会話の機会がほしいなど、それぞれ単独で使うことを想定しています。必要になったときに、別のLabを組み合わせられます。</p><p>一部に書き出し・読み込みの機能がありますが、共通アカウントや全アプリの自動同期が完成しているわけではありません。</p></div></details>
+        <details><summary>英語以外の言語でも使えますか？<span aria-hidden="true">＋</span></summary><div class="faq-answer"><p>対応範囲はアプリによって異なります。Annotator-Connotatorは複数言語の文章・解説に対応しています。Speaking Labにも言語別の設定がありますが、言語ごとに試用・未検証の範囲を含みます。</p><p>Sprint LabとPronunciation Labは、現在の実装では英語が中心です。4つすべてが同じ言語・同じ品質で対応しているという意味ではありません。</p></div></details>
+        <details><summary>AIの指摘は、全部「正解」ですか？<span aria-hidden="true">＋</span></summary><div class="faq-answer"><p>いいえ。AIの解説や音声判断には誤りがあり得ます。学習者が元の発話や文脈を確認できること、根拠が足りなければ判断を保留することを重視しています。</p><p>また、発音や表現の違いがすべて誤りとは限りません。Pronunciation Labでは正当なバリエーションと改善が必要な点を区別します。ネイティブと同一になることを一律のゴールにはしません。</p></div></details>
+        <details><summary>このページで音声や個人情報は送信されますか？<span aria-hidden="true">＋</span></summary><div class="faq-answer"><p>このLPのミニデモとLab案内は、ブラウザ内だけで動きます。マイクを使用せず、入力内容をAIに送信しません。独自のアクセス解析や広告用トラッキング、登録フォームも設置していません。配信元のサーバーが通常のアクセスログを保存する場合はあります。</p><p>アプリ本体は別です。AIへのテキスト・音声送信や保存方法は、それぞれのアプリの利用時の説明を確認してください。</p></div></details>
+      </div>
+    </section>
+
+    <section class="availability-section container" id="availability" aria-labelledby="availability-title">
+      <div class="availability-top"><span class="status-pill"><span aria-hidden="true">◌</span> DEVELOPMENT PREVIEW</span><span class="snapshot-date">掲載情報：2026年9月24日</span></div>
+      <div class="availability-body"><div><h2 id="availability-title">あなたの次の一歩を、<br>ここから。</h2><p>4つのLabは、現在も開発・検証を続けています。<br>一般向けの公開URL・利用料金・開始時期は、このページではまだ案内していません。</p></div><a class="button button-light" href="#find-your-lab">自分に合うLabを見つける <span aria-hidden="true">↗</span></a></div>
+      <div class="availability-bottom"><p>いまは、機能とコンセプトをご覧いただけるプレビューです。</p><a href="https://yamaizumiminoru.github.io/Annotator-Connotator-LP/" target="_blank" rel="noopener noreferrer">Annotator-Connotatorの紹介ページ <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer container"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Language<span class="brand-light"> Labs</span></span></a><p>あなたの言葉に、もうひとつの可能性を。</p><small>© 2026 Minoru Yamaizumi</small><a class="back-to-top" href="#top" aria-label="ページの先頭へ">↑</a></footer>
+</body>
+</html>
